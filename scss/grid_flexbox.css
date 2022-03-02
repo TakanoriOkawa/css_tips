@@ -1,0 +1,42 @@
+p {
+  font-size: 12px;
+  color: gray;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+  background-color: orange;
+}
+
+.wrap > div {
+  color: white;
+  margin: 5px;
+}
+
+.wrap > .one {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  -ms-flex-preferred-size: 150px;
+      flex-basis: 150px;
+  background-color: red;
+  width: 10px;
+}
+
+.wrap > .two {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
+  -ms-flex-preferred-size: 150px;
+      flex-basis: 150px;
+  background-color: purple;
+  width: 30px;
+}
+/*# sourceMappingURL=grid_flexbox.css.map */

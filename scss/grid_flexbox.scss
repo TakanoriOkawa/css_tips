@@ -1,0 +1,50 @@
+p {
+  font-size: 12px;
+  color: gray;
+}
+
+.wrap {
+  display: flex;
+  width: 500px;
+  background-color: orange;
+}
+.wrap > div {
+  color: white;
+  // flex: 1 1 150px;
+  // flexはショートハンド
+
+  // flex-grow: 親要素のflexコンテナの余っているスペース
+  // 子要素のflexアイテムに分配して、flexアイテムを伸ばす。
+
+  // 縮んでいて余っている余白をアイテムの数分、分けて整数の割合で振り分ける。
+
+  // flex-shrink: 親要素のflexからはみ出た分を元に、子要素のflexアイテムを縮めるプロパティ
+  // flex-growとは全く逆の性質。
+  // 使用する場合は、flex-shrink:0 を明示的に定義する。
+
+  // flex-basis: widthとheightと同じ役割を果たす。
+  // 親コンテンツに対するパーセントを設定できる
+  // 基本幅の設定ができる
+
+  margin: 5px;
+
+  // 参考
+  // https://fuuno.net/web02/flex/flex.html
+  // https://miyattiblog.com/explanation-of-flex-property/
+}
+
+.wrap > .one {
+  flex-grow: 1;
+  flex-shrink: 2; // はみ出た100%の2比率分を縮める
+  flex-basis: 150px;
+  background-color: red;
+  width: 10px; // flex-basisはwidthを優先される。
+}
+
+.wrap > .two {
+  flex-grow: 1;
+  flex-shrink: 3; // はみ出た100%の3比率分を縮める
+  flex-basis: 150px;
+  background-color: purple;
+  width: 30px;
+}
