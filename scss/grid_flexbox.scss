@@ -48,3 +48,32 @@ p {
   background-color: purple;
   width: 30px;
 }
+
+.wrapper {
+  margin-top: 20px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: purple;
+}
+.wrapper > div {
+  // flex: 1 1 200px; // flex-basisが優勢
+  flex-basis: 200px;
+  flex-grow: 1; //伸縮できる様にする。 余ったものを列の数分に振り分ける。
+  background-color: bisque;
+}
+
+.grid-wrapper {
+  width: 500px;
+  // 列と行、両方を整列させることができるのがGrid
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-wrapper > div {
+  background-color: skyblue;
+}
+
+// 結論
+// 行、列のどちらかのみを制御したい場合 FlexBox
+// 行と列どちらも制御したい場合、Grid

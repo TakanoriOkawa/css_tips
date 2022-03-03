@@ -59,4 +59,16 @@ p {
           flex-grow: 1;
   background-color: bisque;
 }
+
+.grid-wrapper {
+  width: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-wrapper > div {
+  background-color: skyblue;
+}
 /*# sourceMappingURL=grid_flexbox.css.map */
