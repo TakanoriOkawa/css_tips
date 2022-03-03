@@ -39,4 +39,24 @@ p {
   background-color: purple;
   width: 30px;
 }
+
+.wrapper {
+  margin-top: 20px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: purple;
+}
+
+.wrapper > div {
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: bisque;
+}
 /*# sourceMappingURL=grid_flexbox.css.map */
