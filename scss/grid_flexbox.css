@@ -39,4 +39,36 @@ p {
   background-color: purple;
   width: 30px;
 }
+
+.wrapper {
+  margin-top: 20px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: purple;
+}
+
+.wrapper > div {
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: bisque;
+}
+
+.grid-wrapper {
+  width: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-wrapper > div {
+  background-color: skyblue;
+}
 /*# sourceMappingURL=grid_flexbox.css.map */
