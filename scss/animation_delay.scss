@@ -1,0 +1,56 @@
+.colors {
+  display: flex;
+  flex-direction: row;
+}
+
+.colors > .color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 10px;
+  animation-name: show;
+  animation-duration: 0.7s;
+  opacity: 0;
+}
+
+@for $i from 1 through 10 {
+  .colors > .color:nth-child(#{$i}) {
+    animation-delay: $i * 0.2s;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.colors2 {
+  display: flex;
+  flex-direction: row;
+
+  & > .color2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-top: 20px;
+    margin-right: 10px;
+    transition: all 0.4s ease;
+    opacity: 0;
+  }
+
+  &.-click > .color2 {
+    opacity: 1;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 0.1s;
+      }
+    }
+  }
+}

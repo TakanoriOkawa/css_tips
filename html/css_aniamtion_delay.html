@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../scss/animation_delay.css" />
+  </head>
+  <body>
+    <div class="colors">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </div>
+
+    <div class="colors2">
+      <div class="color2"></div>
+      <div class="color2"></div>
+      <div class="color2"></div>
+      <div class="color2"></div>
+      <div class="color2"></div>
+    </div>
+    <button onclick="toggleClass()">クラスを付与する</button>
+    <script>
+      function toggleClass() {
+        const colors2 = document.querySelector('.colors2');
+        if (colors2.classList.contains('-click')) {
+          colors2.classList.remove('-click');
+        } else {
+          colors2.classList.add('-click');
+        }
+      }
+    </script>
+  </body>
+</html>
